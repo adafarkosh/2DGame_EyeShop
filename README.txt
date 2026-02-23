@@ -1,1 +1,0 @@
-Aspect ratio display recommended: 4x3.
