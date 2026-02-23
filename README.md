@@ -1,6 +1,7 @@
 # Eye Shop — 2D Game Project (Unity)
 
 **Playthrough:** https://drive.google.com/file/d/14S-Phaei2RFaAzGcduA9WQhqSAQoqXvl/view?usp=sharing
+![Eye Shop gameplay screenshot](previewforgit.png)
 
 ## Engine + Version
 - **Unity 6.1** (6000.1.14f1)
