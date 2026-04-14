@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class PlayerDoorTeleporter : MonoBehaviour //* HERE IT'S ALREADY ATTACHED TO THE PLAYER
+public class PlayerDoorTeleporter : MonoBehaviour
 {
     [SerializeField] private float teleportCooldown = 0.5f;
     private float nextTeleportTime = 0f;
 
-    public Rigidbody2D player; //* it’s the recommended way to move physics objects NOT transform.position
+    public Rigidbody2D player; //* itï¿½s the recommended way to move physics objects NOT transform.position
 
 
 

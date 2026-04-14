@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour
 {
-    [SerializeField] private ItemSO itemSO; // ENCAPSULATED PROPERTIES
+    [SerializeField] private ItemSO itemSO;
     [SerializeField] private int quantity;
 
     public ItemSO ItemSO => itemSO;
@@ -49,7 +49,7 @@ public class InventorySlot : MonoBehaviour
             quantityText.text = "";
         }
     }
-    public void SetItem(ItemSO newItem, int newQuantity) //ENCAPSULATED PROPERTY :)))
+    public void SetItem(ItemSO newItem, int newQuantity)
     {
         itemSO = newItem;
         quantity = newQuantity;

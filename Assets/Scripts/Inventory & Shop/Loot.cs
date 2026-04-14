@@ -1,5 +1,3 @@
-// all scripts from "Inventory & Shop folder" -- based on tutorials https://www.youtube.com/watch?v=rnkbTWvl51c&list=PLSR2vNOypvs7sV_ks7h42F7hZ7DmGJqU6
-
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;

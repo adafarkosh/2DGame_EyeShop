@@ -1,5 +1,3 @@
-// parts are from the tutorials https://www.youtube.com/watch?v=0-c3ErDzrh8 = speed part and smootheness/stop; https://youtu.be/5KLV6QpSAdI?si=oMRWWaHeeekuUUCS point and click// 
-// prevent player to go beyong a screen https://www.youtube.com/watch?v=qnr42UXQ0kc&t=120s
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -9,9 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D player;
 
     [SerializeField] private float playerSpeed;
-    private Vector2 desiredPosition; // where we're moving 
+    private Vector2 desiredPosition;
 
-    [SerializeField] private SpriteRenderer playerSprite; //* player will store a reference to the player’s SpriteRenderer component.
+    [SerializeField] private SpriteRenderer playerSprite;
     public Animator playerAnimation;
     private AudioSource playerWalking;
 
@@ -22,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        desiredPosition = player.position; // player begins at 0.0 as i set it (=on a "scene" player position) + prevents from random walking at the beginning of the game
+        desiredPosition = player.position;
         playerWalking = GetComponent<AudioSource>();
 
     }
@@ -36,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
             desiredPosition = new Vector2(mouseWorldPosition.x, player.position.y);
         }
 
-/// WALKING ANIMATION 
+/// WALKING ANIMATION
 
         bool isWalking = !blockedByStopper && Mathf.Abs(player.linearVelocity.x) > 0.001f;
         playerAnimation.SetBool("isWalking", isWalking);
@@ -53,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void FixedUpdate() // for Rigidbody, velocity & other physics= it runs once per physics step (=no jitter as I had in void Update())
+    private void FixedUpdate() // for Rigidbody, velocity & other physics= runs once per physics step (=no jitter as I had in void Update())
     {
         float distanceToDesiredLocation = desiredPosition.x - player.position.x;
         float stopNearThisFrame = playerSpeed * Time.fixedDeltaTime; //physics steps run on fixed(!) time interval, when fps is high, deltaTime is tiny --> fixed
@@ -76,8 +74,8 @@ public class PlayerMovement : MonoBehaviour
 
         /// WALKING sound
         if (Mathf.Abs(player.linearVelocity.x) > 0.01f)
-        //* IF WITHOUT MATHF ABS than it will only be true when moving right. When you walk left, -2.5 > 0.01 is false, so your footsteps won’t play.
-        //* Mathf.Abs(x) turns “how fast and in what direction” into “how fast (ignoring direction)”.
+        //* IF WITHOUT MATHF ABS than it will only be true when moving right. When you walk left, -2.5 > 0.01 is false, so your footsteps wonï¿½t play.
+        //* Mathf.Abs(x) turns ï¿½how fast and in what directionï¿½ into ï¿½how fast (ignoring direction)ï¿½.
         // could be if (vx > 0.01f || vx < -0.01f) Play();
         {
             if (!playerWalking.isPlaying) playerWalking.Play();

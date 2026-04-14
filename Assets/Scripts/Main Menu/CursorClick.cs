@@ -1,5 +1,5 @@
 using UnityEngine;
-// tutorial https://docs.unity3d.com/6000.3/Documentation/ScriptReference/Cursor.SetCursor.html
+
 
 public class CursorClick : MonoBehaviour
 {

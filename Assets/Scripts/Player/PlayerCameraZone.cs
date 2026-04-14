@@ -20,12 +20,12 @@ public class PlayerCameraZone : MonoBehaviour
         //Debug.Log($"[ZONE ENTER] hit={other.name} tag={other.tag} layer={LayerMask.LayerToName(other.gameObject.layer)} playerY={transform.position.y}");
 
 
-        if (other.CompareTag("Room1")) //Checks if the trigger object has tag “Room1”.
+        if (other.CompareTag("Room1")) //Checks if the trigger object has tag ï¿½Room1ï¿½.
         {
-            inCameraZone = true; // Marks that you’re in a camera zone and records which room.
+            inCameraZone = true; // Marks that youï¿½re in a camera zone and records which room.
             currentRoomTag = "Room1";
         }
-        else if (other.CompareTag("Room2")) //Same for Room2
+        else if (other.CompareTag("Room2"))
         {
             inCameraZone = true;
             currentRoomTag = "Room2";
@@ -39,7 +39,7 @@ public class PlayerCameraZone : MonoBehaviour
     {
         //Debug.Log($"[ZONE ENTER] hit={other.name} tag={other.tag} layer={LayerMask.LayerToName(other.gameObject.layer)} playerY={transform.position.y}");
 
-        if (other.CompareTag("Room1") && currentRoomTag == "Room1") //wo checks: you’re leaving a trigger tagged Room1 and your stored current room is Room1. This prevents weird cases where you might have overlapping triggers and you don’t want to clear the state incorrectly.
+        if (other.CompareTag("Room1") && currentRoomTag == "Room1") //wo checks: youï¿½re leaving a trigger tagged Room1 and your stored current room is Room1. This prevents weird cases where you might have overlapping triggers and you donï¿½t want to clear the state incorrectly.
         {
             inCameraZone = false;
             currentRoomTag = ""; // Leave a zone - clear a tag.
