@@ -19,16 +19,16 @@ public class CameraMovement : MonoBehaviour
 
     void Start()
     {
-        desiredDestY = transform.position.y; 
+        desiredDestY = transform.position.y;
 
-        cam = GetComponent<Camera>(); //*Camera is a component in Inspector (for player "Transform" is a component)
+        cam = GetComponent<Camera>();
 
     }
 
 
     void Update()
     {
-        if (Input.GetKey("escape")) 
+        if (Input.GetKey("escape"))
         {
             Application.Quit();
             Debug.Log("Quit!");
@@ -54,7 +54,7 @@ public class CameraMovement : MonoBehaviour
 
         /// BOUND BOX
 
-        Bounds b = camBoxCollider.bounds; //gives me a Bounds object =a 3D “box” in world space that wraps the collider
+        Bounds b = camBoxCollider.bounds; //gives me a Bounds object =a 3D ï¿½boxï¿½ in world space that wraps the collider
                                           //* Bounds by default contains: b.min = the lowest corner(x, y, z); b.max = the highest corner(x, y, z); b.center, b.size, etc.
 
         float camHalfHeight = cam.orthographicSize;
@@ -69,4 +69,3 @@ public class CameraMovement : MonoBehaviour
     }
 
 }
-    

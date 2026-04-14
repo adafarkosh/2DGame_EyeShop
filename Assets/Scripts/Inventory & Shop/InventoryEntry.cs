@@ -1,4 +1,4 @@
-// constructor + encapsulated properties + ToString HERE :))))))))
+// constructor + encapsulated properties + ToString
 using System;
 
 [Serializable]
